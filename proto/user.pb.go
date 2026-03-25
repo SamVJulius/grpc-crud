@@ -7,6 +7,7 @@
 package proto
 
 import (
+	_ "google.golang.org/genproto/googleapis/api/annotations"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -454,7 +455,7 @@ var File_user_proto protoreflect.FileDescriptor
 const file_user_proto_rawDesc = "" +
 	"\n" +
 	"\n" +
-	"user.proto\x12\x04user\"@\n" +
+	"user.proto\x12\x04user\x1a\x1cgoogle/api/annotations.proto\"@\n" +
 	"\x04User\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12\x12\n" +
 	"\x04name\x18\x02 \x01(\tR\x04name\x12\x14\n" +
@@ -478,16 +479,16 @@ const file_user_proto_rawDesc = "" +
 	"\bUserList\x12 \n" +
 	"\x05users\x18\x01 \x03(\v2\n" +
 	".user.UserR\x05users\"\a\n" +
-	"\x05Empty2\xa3\x02\n" +
-	"\vUserService\x129\n" +
+	"\x05Empty2\x88\x03\n" +
+	"\vUserService\x12L\n" +
 	"\n" +
-	"CreateUser\x12\x17.user.CreateUserRequest\x1a\x12.user.UserResponse\x123\n" +
-	"\aGetUser\x12\x14.user.GetUserRequest\x1a\x12.user.UserResponse\x129\n" +
+	"CreateUser\x12\x17.user.CreateUserRequest\x1a\x12.user.UserResponse\"\x11\x82\xd3\xe4\x93\x02\v:\x01*\"\x06/users\x12H\n" +
+	"\aGetUser\x12\x14.user.GetUserRequest\x1a\x12.user.UserResponse\"\x13\x82\xd3\xe4\x93\x02\r\x12\v/users/{id}\x12Q\n" +
 	"\n" +
-	"UpdateUser\x12\x17.user.UpdateUserRequest\x1a\x12.user.UserResponse\x12?\n" +
+	"UpdateUser\x12\x17.user.UpdateUserRequest\x1a\x12.user.UserResponse\"\x16\x82\xd3\xe4\x93\x02\x10:\x01*\x1a\v/users/{id}\x12T\n" +
 	"\n" +
-	"DeleteUser\x12\x17.user.DeleteUserRequest\x1a\x18.user.DeleteUserResponse\x12(\n" +
-	"\tListUsers\x12\v.user.Empty\x1a\x0e.user.UserListB\tZ\a./protob\x06proto3"
+	"DeleteUser\x12\x17.user.DeleteUserRequest\x1a\x18.user.DeleteUserResponse\"\x13\x82\xd3\xe4\x93\x02\r*\v/users/{id}\x128\n" +
+	"\tListUsers\x12\v.user.Empty\x1a\x0e.user.UserList\"\x0e\x82\xd3\xe4\x93\x02\b\x12\x06/usersB\tZ\a./protob\x06proto3"
 
 var (
 	file_user_proto_rawDescOnce sync.Once
